@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/top10-countries/static/css/main.bd6ff139.css",
+    "main.js": "/top10-countries/static/js/main.cb767032.js",
+    "static/media/Pexels.jpg": "/top10-countries/static/media/Pexels.80b0f2a0e964ba1c9ef7.jpg",
+    "index.html": "/top10-countries/index.html",
+    "main.bd6ff139.css.map": "/top10-countries/static/css/main.bd6ff139.css.map",
+    "main.cb767032.js.map": "/top10-countries/static/js/main.cb767032.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd6ff139.css",
+    "static/js/main.cb767032.js"
+  ]
+}
