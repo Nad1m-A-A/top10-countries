@@ -1,0 +1,25 @@
+.main {
+    height: 30rem;
+    display: grid;
+    place-items: center;
+}
+
+.main__message {
+    text-shadow: 1px 1px 1px grey;
+}
+
+.main-fade-in {
+    animation: main-fade-in 1s;
+}
+
+@keyframes main-fade-in {
+    from {
+        /* transform: translate(20%, 40%); */
+        opacity: 0;
+    }
+
+    to {
+        /* transform: translate(0,0); */
+        opacity: 1;
+    }
+}
