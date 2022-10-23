@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/top10-countries/static/css/main.bd6ff139.css",
-    "main.js": "/top10-countries/static/js/main.cb767032.js",
+    "main.css": "/top10-countries/static/css/main.1ebc9ccf.css",
+    "main.js": "/top10-countries/static/js/main.21c21749.js",
+    "static/media/Vivaldi_ Concerto for 4 Violins in B minor RV 580.mp3": "/top10-countries/static/media/Vivaldi_ Concerto for 4 Violins in B minor RV 580.78f8b2a4a4b114ed7e3f.mp3",
     "static/media/Pexels.jpg": "/top10-countries/static/media/Pexels.80b0f2a0e964ba1c9ef7.jpg",
     "index.html": "/top10-countries/index.html",
-    "main.bd6ff139.css.map": "/top10-countries/static/css/main.bd6ff139.css.map",
-    "main.cb767032.js.map": "/top10-countries/static/js/main.cb767032.js.map"
+    "main.1ebc9ccf.css.map": "/top10-countries/static/css/main.1ebc9ccf.css.map",
+    "main.21c21749.js.map": "/top10-countries/static/js/main.21c21749.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd6ff139.css",
-    "static/js/main.cb767032.js"
+    "static/css/main.1ebc9ccf.css",
+    "static/js/main.21c21749.js"
   ]
 }
