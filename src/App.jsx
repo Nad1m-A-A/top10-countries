@@ -1,10 +1,10 @@
 import MainContextProvider from "./context/MainContextProvider";
 
-import Header from "./components/Header";
-import Navigator from "./components/Navigator";
+import Header from "./components/header/Header";
+import Navigator from "./components/navigator/Navigator";
 import Main from "./components/Main";
-import Modal from "./components/Modal";
-import Footer from '../src/components/Footer';
+import Modal from "./components/modal/Modal";
+import Footer from './components/footer/Footer';
 import { useContext } from "react";
 import MainContext from "./context/main-context";
 

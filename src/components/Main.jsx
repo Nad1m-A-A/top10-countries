@@ -1,7 +1,7 @@
-import Field from "./Field"
+import Field from './field/Field'
 import MainContext from "../context/main-context"
 import { useContext } from "react"
-import MainMessage from "./MainMessage";
+import MainMessage from "./main-message/MainMessage";
 
 function Main() {
     const CTX = useContext(MainContext);

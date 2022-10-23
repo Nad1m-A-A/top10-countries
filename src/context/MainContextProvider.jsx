@@ -21,7 +21,7 @@ const reducer = (state, action) => {
     }
 
     if(action.type === 'SET_ASPECT') {
-        let needed = state.data.filter(item => {
+        const needed = state.data.filter(item => {
             for(let x = 0; x < top_10s[action.payload].length; x++) {
                 if(item.name.common === top_10s[action.payload][x].country) {
                     item.description = top_10s[action.payload][x].description;
@@ -31,7 +31,13 @@ const reducer = (state, action) => {
             }
             return null; // What about this ?
         });
-        return {...state, activeAspect: needed, loading: false, aspectName: action.payload, sortingState: 'random' , fadeIn: true} 
+        const neededSorted = needed.slice();
+        neededSorted.sort((a,b) => {
+            if(a.numbers > b.numbers) return 1;
+            if(a.numbers < b.numbers) return -1;
+            return 0;
+        })
+        return {...state, activeAspect: neededSorted, initialAspect: needed, loading: false, aspectName: action.payload, sortingState: '10-1' , fadeIn: true} 
     }
 
     if(action.type === 'SET_LOADING') {
@@ -54,7 +60,8 @@ const reducer = (state, action) => {
                 if(a.numbers < b.numbers) return -1;
                 return 0;
             })
-        return {...state, sortedAspect: sorted, sortingState: '10-1', fadeIn: false}
+        // return {...state, sortedAspect: sorted, sortingState: '10-1', fadeIn: false}
+        return {...state, activeAspect: sorted, sortingState: '10-1', fadeIn: false}
         }
 
         if(action.payload === '10-1') {
@@ -63,11 +70,13 @@ const reducer = (state, action) => {
                 if(a.numbers < b.numbers) return 1;
                 return 0;
             })
-            return {...state, sortedAspect: sorted, sortingState: '1-10', fadeIn: false};
+            // return {...state, sortedAspect: sorted, sortingState: '1-10', fadeIn: false};
+            return {...state, activeAspect: sorted, sortingState: '1-10', fadeIn: false};
         }
 
         if(action.payload === '1-10') {
-            return {...state, sortingState: 'random', fadeIn: false};
+            // return {...state, sortingState: 'random', fadeIn: false};
+            return {...state, sortingState: 'random', fadeIn: false, activeAspect: state.initialAspect};
         }
     }
 
@@ -94,7 +103,6 @@ function MainContextProvider(props) {
         }
         fetch('https://restcountries.com/v3.1/all')
         .then((response) => {
-            console.log(response);
             if(!response.ok) throw Error(`An Error occurred With Status Code ${response.status} (${response.statusText})`);
             return response.json()
         })
@@ -105,7 +113,7 @@ function MainContextProvider(props) {
             dispatch({type: 'SET_ASPECT', payload: text});
         })
         .catch((err) => {
-            dispatch({type:'SET_ERROR', payload: err.message})
+            dispatch({type:'SET_ERROR', payload: err.message === 'Failed to fetch' ? `${err.message} 💥 Please check your internet connection.` : err.message})
         })
     }
 

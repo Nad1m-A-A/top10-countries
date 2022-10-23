@@ -4,6 +4,15 @@
   --color-brown-extra: #ffe6a7;
   --color-green: #2e401c;
   --color-green-light: #a4b75c;
+
+  --font: 'Montserrat', sans-serif;
+
+  --body-color: rgb(65, 2, 2);
+  --field-color: rgb(146, 1, 1);
+  --button-color: rgb(146, 1, 1);
+  --list-color:#ffe6a7;
+  --active-color: #ffe6a7;
+  --interaction-color: black;
 }
 
 
@@ -18,14 +27,23 @@
 }
 
 body {
-  /* background-image: linear-gradient(to right, white, black); */
-  font-family: 'Montserrat', sans-serif;
-  /* background-color: rgb(130, 126, 126); */
-  background-color: rgb(10, 124, 124);
-
+  font-family: var(--font);
+  background-color: var(--body-color);
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
 }

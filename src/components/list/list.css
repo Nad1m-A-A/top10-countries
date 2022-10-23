@@ -1,0 +1,270 @@
+/* state bar */
+.state-bar {
+    color: black;
+    color: var(--color-brown-light);
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 1fr  2fr;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 1.5rem; 
+    border-bottom: 0.5px solid white;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.state-bar .sort-button {
+    background-color: transparent;
+    color: var(--interaction-color);
+    cursor: pointer;
+    position: relative;
+}
+
+.state-bar .sort-button:hover .sorting-state {
+    opacity: 1;
+}
+
+.state-bar .sorting-state {
+    background-color: var(--color-brown-light);
+    color: var(--color-brown-extra);
+    font-family: var(--font);
+    position: absolute;
+    top: -2rem;
+    right: -1.3rem;
+    width: 3.5rem;
+    padding: 2px;
+    opacity: 0;
+    transition: all 500ms;
+}
+/* state bar */
+
+
+
+/* list item */
+.item {
+    background-color: var(--list-color);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 0.8rem;
+    box-shadow: 0px 12px 20px black;
+    border-radius: 20px;
+    position: relative;
+}
+
+.item span {
+    text-align: center;
+}
+
+.item .flag {
+    height: 4rem;
+    width: 6rem;
+}
+
+.item .flag img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 10px black;
+}
+
+.item .name {
+    text-align: center;
+}
+
+.item .numbers {
+    margin-left: 1.5rem;
+    text-align: center;
+    background-color: var(--color-brown-light);
+    color: var(--color-brown-extra);
+    width: 6rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+
+.item .description {
+    width: 14rem;
+    height: 4rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.item .description::after {
+    content: '';
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(transparent, var(--list-color));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.item .big-desc {
+    height: auto;
+    width: 14rem;
+}
+
+.item .more-button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.small-desc {
+    height: auto;
+}
+
+.item .hidden-eye {
+    display: none;
+}
+
+.item-fade-in {
+    animation: item-fade-in 1s;
+}
+@keyframes item-fade-in {
+    from {
+        transform: translate(10%, 10%);
+    }
+
+    to {
+        transform: translate(0,0);
+    }
+}
+/* list item */
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width:1300px) {
+    .item .numbers {
+        width: 5rem;
+        font-size: 0.8rem;
+    }
+
+    .item .description {
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .special {
+        width: 6rem;
+    }
+
+    .special .sort-button {
+        font-size: 0.7rem;
+    }
+
+    .state-bar {
+        font-size: 0.8rem;
+    }
+
+    .special .sorting-state {
+        font-size: 0.6rem;
+        top: -1.5rem;
+    }
+
+    .item {
+        font-size: 0.8rem;
+    }
+
+    .item .flag {
+        height: 3rem;
+        width: 4rem;
+    }
+
+    .item .description {
+        width: 8rem;
+    }
+
+    .item .big-desc {
+        width: 8rem;
+    }
+
+    .item .more-button {
+        font-size: 0.8rem;
+    }
+
+    .item .numbers {
+        width: 5rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .state-bar {
+        font-size: 0.7rem;
+    }
+
+    .state-bar .sorting-state {
+        width: 3rem;
+    }
+
+    .item {
+        font-size: 0.7rem;
+    }
+
+    .item .description {
+        width: 8rem;
+    }
+
+    .item .big-desc {
+        width: 8rem;
+    }
+
+    .item .numbers {
+        width: 4rem;
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .state-bar {
+        font-size: 0.6rem;
+    }
+
+    .item {
+        font-size: 0.6rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .item .flag {
+        height: 2rem;
+        width: 3rem;
+    }
+
+    .item .description {
+        width: 5rem;
+    }
+
+    .item .big-desc {
+        width: 5rem;
+    }
+
+    .item .more-button {
+        font-size: 0.6rem;
+    }
+
+
+    .state-bar .sorting-state {
+        font-size: 0.5rem;
+    }
+
+    .item .numbers {
+        font-size: 0.6rem;
+        margin: 0;
+        padding: 0.1rem;
+        width: 3.5rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .state-bar {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-right: 1rem;
+    }
+}
+/* MEDIA QUERIES */
