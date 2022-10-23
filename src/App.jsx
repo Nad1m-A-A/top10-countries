@@ -15,7 +15,7 @@ function AppWrapper() {
       <App/>
     </MainContextProvider>
   )
-} // maybe there is no need for app wrapper
+}
 
 function App() {
   const CTX = useContext(MainContext);
