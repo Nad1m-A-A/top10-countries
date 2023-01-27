@@ -1,9 +1,48 @@
 @use './variables' as *;
 @import './components/header';
+@import './components/navigator';
+@import './components/main_message';
+@import './components/field';
+@import './components/list';
+@import './components/cards';
+@import './components/footer';
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: $font;
+    text-decoration: none;
+}
+
+body {
+    background-color: $body_color;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: maroon;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    width: 5rem;
+    background-color: $list_color;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
 }

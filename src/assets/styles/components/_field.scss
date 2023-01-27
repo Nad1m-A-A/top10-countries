@@ -1,0 +1,53 @@
+.field {
+    background-color: $field_color;
+    padding: 3rem 5rem;
+    margin: 2.5rem 0 5rem;
+    border-radius: 10px;
+}
+
+.field_fade_in {
+    animation: field-fade-in 2s;
+}
+@keyframes field-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:1300px) {
+    .field {
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .field {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .field {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .field {
+        padding: 1rem 0.8rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .field {
+        padding: 0.8rem 0.5rem;
+    }
+}
+

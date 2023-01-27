@@ -1,0 +1,74 @@
+.main {
+    padding-block: 6rem;
+    display: grid;
+    place-items: center;
+    .main__message {
+        font-weight: normal;
+        color: $color_brown_light;
+        text-shadow: 10px 2px 10px black;
+        border: solid 1px $color_brown_light;
+        padding: 2rem 3rem;
+        width: 25rem;
+        text-align: center;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -0.5rem;
+            left: 0;
+            width: 2rem;
+            height: 1rem;
+            background-color: $body_color;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            right: 0;
+            width: 2rem;
+            height: 1rem;
+            background-color: $body_color;
+        }
+    }
+}
+
+.main-fade-in {
+    animation: main-fade-in 1s;
+}
+@keyframes main-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .main {
+        .main__message {
+            width: 25rem;
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .main {
+        .main__message {
+            width: 20rem;
+            font-size: 0.9rem;
+            padding: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .main {
+        .main__message {
+            width: 15rem;
+            font-size: 0.7rem;
+            padding: 1rem;
+        }
+    }
+}
