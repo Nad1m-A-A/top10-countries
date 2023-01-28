@@ -10,9 +10,10 @@
         justify-content: space-between;
         text-align: center;
         background-color: $list_color;
+        border-radius: 3px;
         border-top-right-radius: 30px;
         border-bottom-left-radius: 30px;
-        box-shadow: 5px 0px 20px black;
+        box-shadow: 1px 0px 5px black;
         padding: 1rem 1rem 2rem 1rem;
         position: relative;
         .order {
@@ -20,9 +21,10 @@
             height: 3rem;
             line-height: 3;
             position: absolute;
-            top: -3rem;
+            top: -2.5rem;
             left: 1;
             padding: 0 1rem 0 0.5rem;
+            border-radius: 5px;
             background: linear-gradient(to right ,$list_color,transparent);
         }
         .flag {
@@ -35,9 +37,10 @@
             max-width: 100%;
             max-height: 100%;
             min-height: 90%;
+            border-radius: 3px;
             border-top-right-radius: 30px;
             border-bottom-left-radius: 30px;
-            box-shadow: 5px 5px 10px black;
+            box-shadow: 1px 1px 5px black;
         }
         
         .numbers {

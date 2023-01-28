@@ -17,7 +17,7 @@
             background-color: $button_color;
             color: $color_brown_extra;
             cursor: pointer;
-            box-shadow: 3px 3px 1px black;
+            box-shadow: 0px 1px 5px black;
             border-radius: 10px;
             border: none;
             transition: 300ms;
@@ -33,6 +33,7 @@
         }
     }
     .display__options {
+        box-shadow: 0px 1px 5px black;
         margin: 2rem auto 0;
         padding: 0.8rem;
         border-radius: 5px;
