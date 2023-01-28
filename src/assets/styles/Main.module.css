@@ -136,10 +136,10 @@ header .note:hover {
     margin-bottom: 10rem;
   }
   header .header__text {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   header .header__text::before, header .header__text::after {
-    font-size: 14px;
+    font-size: 15px;
   }
   header .header__text::after {
     width: 10rem;
@@ -153,10 +153,10 @@ header .note:hover {
     margin-top: 8rem;
   }
   header .header__text {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
   }
   header .header__text::before, header .header__text::after {
-    font-size: 10px;
+    font-size: 13px;
   }
   header .header__text::after {
     width: 8.1rem;
@@ -742,7 +742,6 @@ header .note:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 23rem;
   text-align: center;
   background-color: #ffe6a7;
   border-top-right-radius: 30px;
@@ -769,8 +768,9 @@ header .note:hover {
   margin: 0 auto;
 }
 .cards .card .flag img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 90%;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
   -webkit-box-shadow: 5px 5px 10px black;
@@ -907,6 +907,147 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
     width: auto;
     justify-items: center;
+  }
+}
+footer {
+  background-color: rgb(10, 10, 10);
+  color: white;
+  -webkit-box-shadow: 0px -6px 10px black;
+          box-shadow: 0px -6px 10px black;
+  font-size: 0.9rem;
+}
+footer .footer_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  padding: 3rem 2rem;
+  width: 13rem;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 1.4;
+}
+
+a {
+  color: rgb(72, 72, 255);
+}
+
+.footer_container div h3 {
+  margin-bottom: 1rem;
+}
+
+.site_link {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+@media screen and (min-width: 500px) {
+  footer .footer_container {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    width: 500px;
+  }
+}
+@media screen and (min-width: 700px) {
+  footer .footer_container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: auto;
+    justify-items: center;
+  }
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.modal .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.modal .content {
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  position: relative;
+  width: 40rem;
+  height: 18rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 5rem;
+  border-radius: 15px;
+}
+.modal .message {
+  margin: auto;
+  width: 80%;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, rgb(94, 17, 17), #444, rgb(94, 17, 17));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.modal .confirm {
+  width: 20%;
+  padding: 1rem;
+  background-color: rgb(146, 1, 1);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.modal .confirm:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    width: 35rem;
+    height: 17rem;
+  }
+  .confirm {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .content {
+    width: 30rem;
+    height: 16rem;
+    padding: 4rem 0;
+  }
+  .confirm {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content {
+    width: 25rem;
+    height: 16rem;
+    padding: 4rem 0;
+    font-size: 0.8rem;
+  }
+  .confirm {
+    width: 25%;
+    font-size: 0.6rem;
   }
 }
 * {

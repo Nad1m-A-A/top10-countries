@@ -1,0 +1,92 @@
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .content {
+        background-color: white;
+        box-shadow: 5px 5px 10px black;
+        position: relative;
+        width: 40rem;
+        height: 18rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 5rem;
+        border-radius: 15px;
+    }
+    .message {
+        margin: auto;
+        width: 80%;
+        margin-bottom: 3rem;
+        background: linear-gradient(45deg, rgb(94, 17, 17), #444, rgb(94, 17, 17));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+    .confirm {
+        width: 20%;
+        padding: 1rem;
+        background-color: $field_color;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px black;
+        transition: 0.5s;
+        border-radius: 10px;
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 35rem;
+        height: 17rem;
+    }
+
+    .confirm {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .content {
+        width: 30rem;
+        height: 16rem;
+        padding: 4rem 0;
+    }
+
+    .confirm {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        width: 25rem;
+        height: 16rem;
+        padding: 4rem 0;
+        font-size: 0.8rem;
+    }
+
+    .confirm {
+        width: 25%;
+        font-size: 0.6rem;
+    }
+}

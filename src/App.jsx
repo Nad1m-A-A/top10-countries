@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Navigator from "./components/navigator/Navigator";
 import Main from './components/main/Main';
 import Footer from './components/Footer';
+import Modal from './components/Modal';
 
 function App() {
   const CTX = useContext(MainContext);
@@ -16,7 +17,7 @@ function App() {
       <div className={classes.container}>
         <Navigator/>
         <Main/>
-        {/* <Modal content={CTX.error}/> */}
+        <Modal content={CTX.error}/>
       </div>
       <Footer/>
     </div>
